@@ -142,7 +142,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "default": "V6"
+              "default": "I"
             }
           },
           {
