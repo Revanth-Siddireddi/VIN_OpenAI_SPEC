@@ -1,0 +1,1 @@
+# VIN_OpenAI_SPEC
