@@ -30,8 +30,12 @@
             "name": "car_type",
             "in": "query",
             "description": "Car condition - used or new",
-            "required": true,
-            "schema": { "type": "string", "enum": ["used", "new"] }
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["used", "new"],
+              "default": "new"
+            }
           },
           {
             "name": "vin",
@@ -111,128 +115,128 @@
             "schema": { "type": "string" }
           },
           {
-          "name": "transmission",
-          "in": "query",
-          "description": "Transmission type",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "enum": ["Manual", "Automatic"],
-            "default": "Automatic"
+            "name": "transmission",
+            "in": "query",
+            "description": "Transmission type",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["Manual", "Automatic"],
+              "default": "Automatic"
+            }
+          },
+          {
+            "name": "drivetrain",
+            "in": "query",
+            "description": "Car's drivetrain",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "FWD"
+            }
+          },
+          {
+            "name": "engine_block",
+            "in": "query",
+            "description": "Engine block info",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "V6"
+            }
+          },
+          {
+            "name": "engine_size",
+            "in": "query",
+            "description": "Engine size in liters",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "default": 2.0
+            }
+          },
+          {
+            "name": "cylinders",
+            "in": "query",
+            "description": "Number of cylinders",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 4
+            }
+          },
+          {
+            "name": "doors",
+            "in": "query",
+            "description": "Number of doors",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 4
+            }
+          },
+          {
+            "name": "highway_mpg",
+            "in": "query",
+            "description": "Highway mileage",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
+          },
+          {
+            "name": "city_mpg",
+            "in": "query",
+            "description": "City mileage",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          },
+          {
+            "name": "zip",
+            "in": "query",
+            "description": "Selling location's Zip Code",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "10001"
+            }
+          },
+          {
+            "name": "latitude",
+            "in": "query",
+            "description": "Selling location's latitude",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "39.8283"
+            }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "description": "Selling location's longitude",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "-98.5795"
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "description": "Country for price prediction, allowed values: \"us\" or \"ca\"",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["us", "ca"],
+              "default": "us"
+            }
           }
-        },
-        {
-          "name": "drivetrain",
-          "in": "query",
-          "description": "Car's drivetrain",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "default": "FWD"
-          }
-        },
-        {
-          "name": "engine_block",
-          "in": "query",
-          "description": "Engine block info",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "default": ""
-          }
-        },
-        {
-          "name": "engine_size",
-          "in": "query",
-          "description": "Engine size in liters",
-          "required": false,
-          "schema": {
-            "type": "number",
-            "format": "float",
-            "default": 2.0
-          }
-        },
-        {
-          "name": "cylinders",
-          "in": "query",
-          "description": "Number of cylinders",
-          "required": false,
-          "schema": {
-            "type": "integer",
-            "default": 4
-          }
-        },
-        {
-          "name": "doors",
-          "in": "query",
-          "description": "Number of doors",
-          "required": false,
-          "schema": {
-            "type": "integer",
-            "default": 4
-          }
-        },
-        {
-          "name": "highway_mpg",
-          "in": "query",
-          "description": "Highway mileage",
-          "required": false,
-          "schema": {
-            "type": "integer",
-            "default": 30
-          }
-        },
-        {
-          "name": "city_mpg",
-          "in": "query",
-          "description": "City mileage",
-          "required": false,
-          "schema": {
-            "type": "integer",
-            "default": 20
-          }
-        },
-        {
-          "name": "zip",
-          "in": "query",
-          "description": "Selling location's Zip Code",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "default": "10001"
-          }
-        },
-        {
-          "name": "latitude",
-          "in": "query",
-          "description": "Selling location's latitude",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "default": "39.8283"
-          }
-        },
-        {
-          "name": "longitude",
-          "in": "query",
-          "description": "Selling location's longitude",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "default": "-98.5795"
-          }
-        },
-        {
-          "name": "country",
-          "in": "query",
-          "description": "Country for price prediction, allowed values: \"us\" or \"ca\"",
-          "required": false,
-          "schema": {
-            "type": "string",
-            "enum": ["us", "ca"],
-            "default": "us"
-          }
-        }
         ],
         "responses": {
           "200": {
