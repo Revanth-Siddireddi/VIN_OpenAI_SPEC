@@ -22,7 +22,8 @@
             "description": "API key for authenticating requests",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": "yGJZCMV9QMgeKmlvwDE9BMMpGKV6DezT"
             }
           },
           {
@@ -218,4 +219,3 @@
     }
   }
 }
-
